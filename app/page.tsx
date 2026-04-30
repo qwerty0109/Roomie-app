@@ -4,6 +4,9 @@ import { supabase } from '@/lib/supabase'
 <a href="/premium" className="bg-amber-400 text-amber-900 px-3 py-2 rounded-lg font-bold hover:bg-amber-500 transition text-sm">
   ⭐ Plus
 </a>
+<a href="/pisos" className="bg-white border p-2 rounded-lg shadow-sm hover:bg-gray-50 transition text-sm font-bold text-gray-700">
+  🏠 Pisos
+</a>
 export default function HomePage() {
   const [perfiles, setPerfiles] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
