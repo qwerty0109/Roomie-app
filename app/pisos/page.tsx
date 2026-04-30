@@ -18,7 +18,11 @@ export default function PisosPage() {
     cargar()
   }, [])
 
-  if (loading) return <div className="flex justify-center items-center h-screen text-indigo-600 font-bold">Cargando pisos...</div>
+  if (loading) return (
+    <div className="flex justify-center items-center h-screen text-indigo-600 font-bold">
+      Cargando pisos...
+    </div>
+  )
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -40,7 +44,9 @@ export default function PisosPage() {
           <div className="bg-white p-10 rounded-2xl border-2 border-dashed text-center">
             <span className="text-4xl block mb-2">🏠</span>
             <p className="text-gray-600 font-medium">Aún no hay pisos publicados.</p>
-            <a href="/pisos/nuevo" className="text-indigo-600 font-bold text-sm mt-2 inline-block">Sé el primero en publicar →</a>
+            <a href="/pisos/nuevo" className="text-indigo-600 font-bold text-sm mt-2 inline-block">
+              Sé el primero en publicar →
+            </a>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -66,7 +72,9 @@ export default function PisosPage() {
                     ) : (
                       <div className="w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center text-xs">👤</div>
                     )}
-                    <span className="text-xs text-gray-500">Publicado por <b>{piso.perfiles?.nombre}</b></span>
+                    <span className="text-xs text-gray-500">
+                      Publicado por <b>{piso.perfiles?.nombre}</b>
+                    </span>
                   </div>
                   
                     href={`/chat/${piso.propietario_id}`}
